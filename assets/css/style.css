@@ -5,11 +5,13 @@ body {
 }
 
 header {
-    opacity: 0;
-    color: white;
+    /* opacity: 0.1; */
+    color: whitesmoke;
+
 }
 .myAuth {
-    margin:0 auto;
+    /* margin:0 auto; */
+    float: right;
     width: 50%;
 }
 
