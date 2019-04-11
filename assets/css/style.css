@@ -1,15 +1,17 @@
 body {
-    background: url("../images/bgMainPage2.jpg");
-    background-size: 100% 100%;
+    background: url("../images/bgMainPage3.jpg");
+    background-size: 100%;
     /* background-repeat: no-repeat; */
 }
 
 header {
-    opacity: 0;
-    color: white;
+    /* opacity: 0.1; */
+    color: whitesmoke;
+
 }
 .myAuth {
-    margin:0 auto;
+    /* margin:0 auto; */
+    float: right;
     width: 50%;
 }
 
