@@ -4,18 +4,30 @@ body {
     /* background-repeat: no-repeat; */
 }
 
-header {
-    /* opacity: 0.1; */
+header, label {
     color: whitesmoke;
+}
 
+.myNameInput {
+    border: 1px solid brown;
+}
+
+.myBtn {
+    background-color: brown;
+    color: white;
 }
 .myAuth {
-    /* margin:0 auto; */
-    float: right;
-    width: 50%;
+    position: absolute;
+    bottom: 60px;
+    right: 200px;
+    width: 40%;
+    border: 5px brown;
+    border-style: double;
 }
-
-/* .myheader {
-    opacity: 0.1;
-    color: white:
-} */
+.myheader {
+    position: absolute;
+    right: 20px;
+}
+#myColor {
+    color: brown;
+}
