@@ -1,23 +1,34 @@
 .card-img-top{
-  width: 80%;
+  width: 100%;
   height: 30%;
 }
 body {
-  background: url("../images/bgMainPage2.jpg");
-  background-size: 100% 100%;
-  /* background-repeat: no-repeat; */
+  background: url("../images/musicimage2.jpg");
+  background-size: 100% ;
+ 
 }
 
 header {
-  opacity: 0;
-  color: white;
+ /* opacity: 0.1;
+  color:whitesmoke;*/
+
+
 }
 .myAuth {
   margin:0 auto;
   width: 50%;
 }
 
-/* .myheader {
+ .myheader {
   opacity: 0.1;
-  color: white:
-} */
+  color: whitesmoke;
+}
+.card{
+  background-color:rgb(4, 89, 117);
+  color: whitesmoke;
+  border-block-end-color: blue;
+  width: 50%;
+}
+.table{
+  color: azure;
+}
