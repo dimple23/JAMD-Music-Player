@@ -18,31 +18,33 @@
 
     <header class="container-fluid">
         <!-- <div class="jumbotron jumbotron-fluid p-3 myheader"> -->
-        <!-- <div class=""> -->
-            <div class="container text-center p-3 myheader">
+        <div class="">
+            <div class="text-center p-3 myheader">
                 <h1 class="display-3"><strong>.J.A.M.D.</strong></h1>
-                <h1 class="display-5">*** turn the music up ***</h1>
+                <h1 class="display-5"><spam id="myColor">***</spam> let the music play <spam id="myColor">***</spam></h1>
             </div>
-        <!-- </div> -->
+        </div>
     </header>
 
     <main class="container">
           
-        <div class="text-center p-5 myAuth">
+        <div class="p-3 myAuth">
                       
             <form id="auth-form">
-                <div class="form-group">
+                <div class="form-group text-center">
                     <label for="name-input"><h2>Your Signature</h2></label>
-                    <input class="form-control text-right p-4" type="text" id="name-input" placeholder="John Doe"/>
-                </div>
-
-                <!-- Sign in to your Google account -->
-                <div>
-                    <button class="btn btn-block btn-info mt-5 p-4" type="submit">
-                        <strong>Sign in to your Google account  <i class="fab fa-google"></i></strong> 
-                    </button>
+                    <input class="form-control text-center p-4 myNameInput" type="text" id="name-input" placeholder="John Doe"/>
                 </div>
             </form>
+
+            <!-- Sign in to your Google account -->
+            <div class="text-center">
+                <button class="btn btn-block mt-3 p-4 myBtn" type="submit">
+                    <strong>Sign in to your Google account  <i class="fab fa-google"></i></strong> 
+                </button>
+            </div>
+
+        <!-- End 'myAuth' class -->
         </div>
     </main>
 
