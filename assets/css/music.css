@@ -7,3 +7,46 @@
   font-size: 3rem;
   padding: 0 10px;
 }
+
+.card-img-top{
+  width: 100%;
+  height: 30%;
+}
+body {
+  background: url("../images/musicimage2.jpg");
+  background-size: 100% ;
+ 
+}
+
+header {
+ /* opacity: 0.1;
+  color:whitesmoke;*/
+
+
+}
+.myAuth {
+  margin:0 auto;
+  width: 50%;
+}
+
+ .myheader {
+   background-image:url(../images/jumbo.png);
+   width: 100%;
+ 
+  color:rgb(146, 97, 7);
+}
+.card{
+  background-color:rgb(4, 89, 117);
+  color: whitesmoke;
+  border-block-end-color: blue;
+  width: 50%;
+}
+.table{
+  color: azure;
+}
+#musicbutton{
+  align-content:left;
+}
+h1{
+  text-align: right;
+}

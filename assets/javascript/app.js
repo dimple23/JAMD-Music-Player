@@ -14,6 +14,7 @@ let access_token = params.access_token,
   state = params.state,
   storedState = localStorage.getItem(stateKey);
 
+
 /**
  * Obtains parameters from the hash of the URL
  * @return Object
@@ -183,7 +184,8 @@ console.log($("#artist-input").val().trim())
 function getArtistInfo() {
 console.log("here")
 var artist = $("#artist-input").val().trim();
-var queryUrl = "https://api.spotify.com/v1/search?q=" + artist + "type=artist%2C%20track%2C%20playlist%2C%20album&market=US&limit=50"
+var queryUrl = `https://api.spotify.com/v1/search?q=${artist}&type=artist&market=US`
+
 
 $.ajax({
     url: queryUrl,
@@ -195,14 +197,52 @@ $.ajax({
   })
   .then(function (response) {
     console.log(response);
-    printArtistInfo(response.items);
+    printArtistAlbums(response.artists.items[0].uri);
+  })
+  .catch(function(err) {
+    console.log(err);
   })
 
 }
 
+function printArtistAlbums(id) {
+  console.log(id);
 
+  var artistId = id.split(":")[2];
+  
+  console.log(artistId);
+  var queryUrl = `https://api.spotify.com/v1/artists/${artistId}/albums`;
 
+  $.ajax({
+    url: queryUrl,
+    method: "GET",
+    headers: {
+      'Authorization': "Bearer " + access_token
+    }
 
+  })
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function(err) {
+    console.log(err);
+  })
+}
+
+// print out artist albums
+function printArtistAlbums(albumArray) {
+  
+  const $artistAlbums = $("#playlist-info");
+  $artistAlbums.empty();
+  albumArray.forEach(function (album) {
+    $("<button>")
+      .addClass("list-group-item d-flex justify-content-between align-items-center playlist-button list-group-item-action")
+      .attr({"data-artist-id": response.artists.items.name, "data-album-uri": response.items.uri})
+      .text(response.items.uri, response.items.images)
+      .append(`<span class="badge badge-danger badge-pill">${album.name}</span>`)
+      .appendTo($artistAlbums);
+  });
+}
 
 
 
@@ -230,7 +270,7 @@ function printPlaylistInfo(playlistArray) {
   playlistArray.forEach(function (playlist) {
     $("<button>")
       .addClass("list-group-item d-flex justify-content-between align-items-center playlist-button list-group-item-action")
-      .attr({"data-playlist-id": playlist.id, "data-playlist-uri": playlist.uri})
+      .attr({"data-artist-id": playlist.id, "data-playlist-uri": playlist.uri})
       .text(playlist.name)
       .append(`<span class="badge badge-danger badge-pill">${playlist.tracks.total}</span>`)
       .appendTo($playlistInfo);
