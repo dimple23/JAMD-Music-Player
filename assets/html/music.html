@@ -16,56 +16,59 @@
     <div id="myBody"></div>
 
     <header class="container-fluid">
-        <div class="jumbotron jumbotron-fluid p-3 myheader">
+        <div  id="searchArtist"class= "jumbotron jumbotron-fluid p-3 myheader">
             <div class="container text-center">
-            <h1 class="display-3"><strong>.J.A.M.D.</strong></h1>
-            <h1 class="display-5">*** turn the music up ***</h1>
+            
             </div>
         </div>
     </header>
     <div class="row-12">
       <div class="col-md-5">
     <div class="card-deck">
-        <div class="card">
+        <div  id="playlistCard"   class="card">
           <img src="../images/musiccard3.gif" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title"></h5>
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">Your Music Playlist
-                    
-                  </th>
+                    <th scope="col">Your Music Playlist  </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1
-                        <button id="musicbutton" type="button" class="btn btn-primary fa fa-play" aria-hidden="true"></button>
-                        <button id="musicbutton" type="button" class="btn btn-primary fa fa-music "   aria-hidden="true"></button>
+                        <button id="musicButton" type="button" class="btn btn-primary fa fa-play" aria-hidden="true"></button>
+                        <button id="lyricButton" type="button" class="btn btn-primary fa fa-music "   aria-hidden="true"></button>
                         
                     </th>
                   </tr>
                   <tr>
                     <th>
                         <button id="musicbutton" type="button" class="btn btn-primary fa fa-play" aria-hidden="true"></button>
-                        <button id="musicbutton" type="button" class="btn btn-primary fa fa-music "   aria-hidden="true"></button>
+                        <button id="lyricbutton" type="button" class="btn btn-primary fa fa-music "   aria-hidden="true"></button>
                       </th>
                   </tr>
-                  <tr>
-                      
-                  </tr>
-                </tbody>
-              </table>
- 
-
-          </div>
-        </div>
+                    <tr>
+                      </tr>
+            </tbody>
+       </table>
       </div>
-    
+   </div>
+</div>
+      <div id="weatherMood"    class="col-md-7">
+      </div>    
+      
+      <div id="lyricsPlay"></div>
+        <div id="footerplay">
+           <footer>
+          </footer>
+        </div>
+
         
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
