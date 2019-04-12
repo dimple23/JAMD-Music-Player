@@ -12,64 +12,82 @@
 </head>
 <body>
 
-
-    <div id="myBody"></div>
-
-    <header class="container-fluid">
-        <div  id="searchArtist"class= "jumbotron jumbotron-fluid p-3 myheader">
-            <div class="container text-center">
-            
-            </div>
+<div class="container">
+    <div class="card">
+        <div id="searchArtist" class="card-body">
+          This is some text within a card body.
         </div>
-    </header>
-    <div class="row-12">
-      <div class="col-md-5">
-    <div class="card-deck">
-        <div  id="playlistCard"   class="card">
-          <img src="../images/musiccard3.gif" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title"></h5>
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Your Music Playlist  </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1
-                        <button id="musicButton" type="button" class="btn btn-primary fa fa-play" aria-hidden="true"></button>
-                        <button id="lyricButton" type="button" class="btn btn-primary fa fa-music "   aria-hidden="true"></button>
-                        
-                    </th>
-                  </tr>
-                  <tr>
-                    <th>
-                        <button id="musicbutton" type="button" class="btn btn-primary fa fa-play" aria-hidden="true"></button>
-                        <button id="lyricbutton" type="button" class="btn btn-primary fa fa-music "   aria-hidden="true"></button>
-                      </th>
-                  </tr>
-                    <tr>
-                      </tr>
-            </tbody>
-       </table>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card-deck">
+                <div  id="playlistCard"   class="card">
+                  <img src="../images/musiccard3.gif" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Your Music Playlist  </th>
+                          </tr>
+                          
+                        </thead>
+                        <tbody>
+                          <tr>
+                                <td id="songName" >songName:</td>
+                          </tr>
+                          <tr>
+                                <td id="artistName">artistName:
+                                    <button id="musicButton" type="button" class="btn btn-primary fa fa-play" aria-hidden="true"></button>
+                                    <button id="lyricButton" type="button" class="btn btn-primary fa fa-music "   aria-hidden="true"></button>
+                                </td>
+                          </tr>
+                          <tr>
+                              <td id="songName" >songName:</td>
+                        </tr>
+                          <tr>
+                              <td id="artistName">artistName:
+                                  <button id="musicButton" type="button" class="btn btn-primary fa fa-play" aria-hidden="true"></button>
+                                  <button id="lyricButton" type="button" class="btn btn-primary fa fa-music "   aria-hidden="true"></button>
+                              </td>
+                        </tr>
+                    </tbody>
+                 </table>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="col-md-4 my-3">
+          <div class="card fa-align-right">
+            <div class="card-body">
+              <h5 class="card-title">weatherMood</h5>
+              <div id="weatherMood">
+                </div>    
+                
+                <div id="lyricsPlay"></div>
+              
+          </div>
+        </div>
       </div>
-   </div>
-</div>
-      <div id="weatherMood"    class="col-md-7">
-      </div>    
+  </div>
+    
+
       
-      <div id="lyricsPlay"></div>
         <div id="footerplay">
            <footer>
           </footer>
         </div>
+      </div>
 
         
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+<script src="../javascript/playlist.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
