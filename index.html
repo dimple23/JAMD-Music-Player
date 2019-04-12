@@ -6,13 +6,120 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="assets/css/music.css">
 <title>Title</title>
 </head>
 <body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+
+    <header class="jumbotron jumbotron-fluid bg-warning p-3 myheader">
+        <div class="container text-center">
+          <h1 class="display-3"><strong>.J.A.M.D.</strong></h1>
+          <h1 class="display-5">*** turn the music up ***</h1>
+        </div>
+    </header>
+    <div class="row-12">
+      <div class="col-md-5">
+    <div class="card-deck">
+        <div class="card">
+          <img src="../images/musicplaylist.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Your Music Playlist</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="jumbotron jumbotron-fluid d-flex flex-column align-items-center justify-content-center">
+        <h1>Spotify</h1>
+        <button class="btn btn-lg btn-success" id="login-button">Login</button>
+        <div id="music-player">
+          <h3 id="track"></h3>
+          <h4 id="artist" class="text-muted"></h4>
+          <span id="prev-button"><i class="fas fa-angle-left"></i></span>
+          <span id="play-button" data-state="play"><i class="fas fa-play"></i></span>
+          <span id="next-button"><i class="fas fa-angle-right"></i></span>
+          <div id="profile-info"></div>
+        </div>
+      </div>
+
+      <form id="artist-form">
+        <label for="artist-input">Add an Artist</label>
+        <input type="text" id="artist-input"><br>
+
+            <!-- Button triggers artist search to be added -->
+            <input id="search-artist" type="submit" value="Search Artist">
+          </form>
+
+      <div class="container-fluid my-5" id="app-body">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            
+    
+            </div>
+            <div id="user-buttons" class="my-3">
+              <div class="btn btn-primary btn-block" id="user-playlists">Get User Playlists</div>
+              <div class="btn btn-info btn-block" id="featured-playlists">Get Featured Playlists</div>
+              <form id="categories" class="mt-4">
+                <!--<h4>Select Categories to Search For</h4>
+                <div class="form-group">
+                  <select class="form-control" id="categories-list"></select>
+                </div>-->
+              </form>
+    
+            </div>
+          </div>
+    
+          <div class="col-12 col-md-9">
+            <div class="row" id="music_info">
+              <div class="col-12 col-md-6 mb-5">
+                <div class="card">
+                  <div class="card-header">
+                    Select Playlist
+                  </div>
+                  <div id="playlist-info" class="list-group list-group-flush">
+    
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mb-5">
+                <div class="card">
+                  <div class="card-header">
+                    Select Track
+                  </div>
+                  <div class="list-group list-group-flush" id="track-info">
+                    Select Playlist to Show Tracks
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+        
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+<script src="assets/javascript/app.js"></script>
 </body>
 </html>
