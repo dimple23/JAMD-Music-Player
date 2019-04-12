@@ -1,0 +1,33 @@
+body {
+    background: url("../images/bgMainPage3.jpg");
+    background-size: 100%;
+    /* background-repeat: no-repeat; */
+}
+
+header, label {
+    color: whitesmoke;
+}
+
+.myNameInput {
+    border: 1px solid brown;
+}
+
+.myBtn {
+    background-color: brown;
+    color: white;
+}
+.myAuth {
+    position: absolute;
+    bottom: 60px;
+    right: 200px;
+    width: 40%;
+    border: 5px brown;
+    border-style: double;
+}
+.myheader {
+    position: absolute;
+    right: 20px;
+}
+#myColor {
+    color: brown;
+}
