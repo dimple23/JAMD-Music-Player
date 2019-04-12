@@ -20,8 +20,10 @@ header {
 }
 
  .myheader {
-  opacity: 0.1;
-  color: whitesmoke;
+   background-image:url(../images/jumbo.png);
+   width: 100%;
+ 
+  color:rgb(146, 97, 7);
 }
 .card{
   background-color:rgb(4, 89, 117);
@@ -31,4 +33,10 @@ header {
 }
 .table{
   color: azure;
+}
+#musicbutton{
+  align-content:left;
+}
+h1{
+  text-align: right;
 }
