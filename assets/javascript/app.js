@@ -163,13 +163,49 @@ function setWebPlayer(playerId, access_token) {
       }
     })
     .then(function (response) {
-      console.log(response);
+      //console.log(response);
 
     })
     .catch(function (err) {
       console.log(err);
     });
 }
+
+//get searched artist tracks, albums and playlists
+
+$("#search-artist").on("click", function(e){
+  e.preventDefault();
+console.log($("#artist-input").val().trim())
+  getArtistInfo()
+
+})
+
+function getArtistInfo() {
+console.log("here")
+var artist = $("#artist-input").val().trim();
+var queryUrl = "https://api.spotify.com/v1/search?q=" + artist + "type=artist%2C%20track%2C%20playlist%2C%20album&market=US&limit=50"
+
+$.ajax({
+    url: queryUrl,
+    method: "GET",
+    headers: {
+      'Authorization': "Bearer " + access_token
+    }
+
+  })
+  .then(function (response) {
+    console.log(response);
+    printArtistInfo(response.items);
+  })
+
+}
+
+
+
+
+
+
+
 
 // get logged in spotify user's playlists
 function getUserPlaylists() {
@@ -371,7 +407,7 @@ function getCurrentSong() {
   })
 }
 
-//search for artist
+
 
 
 
@@ -392,37 +428,16 @@ function getCategories() {
         .appendTo($("#categories-list"));
     })
   });
+
+
 }
 
-function searchArtist(event) {
 
-  event.preventDefault();
-  
-  var artist = $("#artist-input").val().trim();
 
-  
-  $.ajax({
-    url: "https://api.spotify.com/v1/search/q=action-bronson&type=track%2C%20artist%2C%20album&market=US&limit=20",
-    method: "GET",
-    headers: {
-      'Authorization': "Bearer " + access_token
-    }
-  }).then(function(response) {
-    console.log(response);
-    printPlaylistInfo(response.items);
-  })
 
-  $("#search-artist").on("click", function(event) {
-    event.preventDefault();
-    // This line of code will grab the input from the textbox
-    var artist = $("#artist-input").val().trim();
 
-    // The artist from the textbox is then added to our array
-  artists.push(artist);
-  })
-}
 // get featured playlists
-function getFeaturedPlaylists() {
+function getFeaturedPlaylists() { 
   $.ajax({
     url: "https://api.spotify.com/v1/browse/featured-playlists",
     method: "GET",
