@@ -197,7 +197,7 @@ $.ajax({
   })
   .then(function (response) {
     console.log(response);
-    printArtistAlbums(response.artists.items[0].uri);
+    getArtistAlbums(response.artists.items[0].uri);
   })
   .catch(function(err) {
     console.log(err);
@@ -205,7 +205,7 @@ $.ajax({
 
 }
 
-function printArtistAlbums(id) {
+function getArtistAlbums(id) {
   console.log(id);
 
   var artistId = id.split(":")[2];
@@ -223,6 +223,9 @@ function printArtistAlbums(id) {
   })
   .then(function (response) {
     console.log(response);
+    printArtistAlbums(response)
+
+
   })
   .catch(function(err) {
     console.log(err);
@@ -232,16 +235,12 @@ function printArtistAlbums(id) {
 // print out artist albums
 function printArtistAlbums(albumArray) {
   
-  const $artistAlbums = $("#playlist-info");
-  $artistAlbums.empty();
-  albumArray.forEach(function (album) {
-    $("<button>")
-      .addClass("list-group-item d-flex justify-content-between align-items-center playlist-button list-group-item-action")
-      .attr({"data-artist-id": response.artists.items.name, "data-album-uri": response.items.uri})
-      .text(response.items.uri, response.items.images)
-      .append(`<span class="badge badge-danger badge-pill">${album.name}</span>`)
-      .appendTo($artistAlbums);
-  });
+  console.log(albumArray)
+
+
+
+  
+
 }
 
 
